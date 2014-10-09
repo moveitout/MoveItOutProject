@@ -1,0 +1,24 @@
+class Level {
+int number;
+
+class MyPoint {
+int x, y, color;
+}
+
+class Figure {
+ArrayList<MyPoint> points;
+}
+
+class Shtir {
+MyPoint point;
+}
+
+ArrayList<Figure> figures;
+}
+class LevelActivity extends Activity {
+Level level;
+
+LevelActivity(Level level) {
+this.level = level;
+}
+}
