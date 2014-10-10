@@ -1,5 +1,9 @@
 class Level {
 int number;
+ArrayList<Pin> pinns;
+ArrayList<Figure> figures;
+}
+
 
 class MyPoint {
 int x, y, color;
@@ -9,12 +13,11 @@ class Figure {
 ArrayList<MyPoint> points;
 }
 
-class Shtir {
-MyPoint point;
+class Pin {
+MyPoint place;
 }
 
-ArrayList<Figure> figures;
-}
+
 class LevelActivity extends Activity {
 Level level;
 
@@ -22,3 +25,13 @@ LevelActivity(Level level) {
 this.level = level;
 }
 }
+
+FIELD_SIZE = 60*80
+
+
+***
+levels.txt FORMAT::
+--"#" + levelNum
+--pinsNum + " " + figuresNum
+--80 lines of 60 chars :: 0 - freeSpace, 1 - Pin, from 2 to figuresNum+2 -- iFigure
+***
